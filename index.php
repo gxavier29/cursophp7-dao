@@ -14,9 +14,8 @@ require_once("config.php");
 
 
 //carrega uma lista de usuarios
-$lista = Usuario::getList();
-echo json_encode($lista);
-
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
 
 
@@ -24,9 +23,24 @@ echo json_encode($lista);
 //$search = Usuario::search("jo");
 //echo json_encode($search);
 
+
 //carrega um usuario usando login e a senha
 //$usuario = new Usuario();
 //$usuario->login("user", "12345");
 //echo $usuario;
+
+//INSERT - Criando novo usuario
+//$aluno = new Usuario("gabriel", "xxxx");
+//$aluno->insert();
+//echo $aluno;
+
+$usuario = new Usuario();
+
+$usuario->loadById(10);
+
+$usuario->update("zelhao", "101010");
+
+echo $usuario;
+
 
 ?>
