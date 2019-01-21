@@ -34,12 +34,18 @@ require_once("config.php");
 //$aluno->insert();
 //echo $aluno;
 
+
+//UPADATE - Carrega um ID e altera o usuario
+//$usuario = new Usuario();
+//$usuario->loadById(10);
+//$usuario->update("zelhao", "101010");
+//echo $usuario;
+
+//DELETE - Carrega um ID e deleta o usuario
+
 $usuario = new Usuario();
-
-$usuario->loadById(10);
-
-$usuario->update("zelhao", "101010");
-
+$usuario->loadById(7);
+$usuario->delete();
 echo $usuario;
 
 
